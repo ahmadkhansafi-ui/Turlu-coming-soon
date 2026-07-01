@@ -221,6 +221,61 @@
     });
   }
 
+  /* ---------- Cinematic footer: scroll scrub + magnetic pills ----------
+     Vanilla stand-in for the original GSAP ScrollTrigger scrub and
+     magnetic-button tweens. */
+  (function cinematicFooter() {
+    const wrap = $("#cfWrap");
+    if (!wrap) return;
+    const giant = $("#cfGiant"), heading = $("#cfHeading"), links = $("#cfLinks");
+    const clamp = function (v, a, b) { return Math.min(b, Math.max(a, v)); };
+
+    if (!reducedMotion) {
+      let ticking = false;
+      function update() {
+        ticking = false;
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        const r = wrap.getBoundingClientRect();
+        const p = clamp((vh - r.top) / vh, 0, 1);              // giant text: full reveal span
+        const pc = clamp((vh * 0.7 - r.top) / (vh * 0.7), 0, 1); // content: starts once 30% revealed
+        if (giant) {
+          giant.style.transform = "translateX(-50%) translateY(" + ((1 - p) * 10).toFixed(2) + "vh) scale(" + (0.8 + 0.2 * p).toFixed(3) + ")";
+          giant.style.opacity = p.toFixed(3);
+        }
+        if (heading) {
+          heading.style.transform = "translateY(" + ((1 - pc) * 50).toFixed(1) + "px)";
+          heading.style.opacity = pc.toFixed(3);
+        }
+        if (links) {
+          const p2 = clamp(pc * 1.18 - 0.18, 0, 1); // stagger: trails the heading
+          links.style.transform = "translateY(" + ((1 - p2) * 50).toFixed(1) + "px)";
+          links.style.opacity = p2.toFixed(3);
+        }
+      }
+      const onScroll = function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll, { passive: true });
+      update();
+    }
+
+    if (!reducedMotion && window.matchMedia && window.matchMedia("(hover: hover)").matches) {
+      $$(".magnetic").forEach(function (el) {
+        el.addEventListener("mousemove", function (e) {
+          const r = el.getBoundingClientRect();
+          const x = e.clientX - r.left - r.width / 2;
+          const y = e.clientY - r.top - r.height / 2;
+          el.style.transition = "transform .25s cubic-bezier(.2,.7,.3,1)";
+          el.style.transform = "translate(" + (x * 0.35).toFixed(1) + "px," + (y * 0.35).toFixed(1) + "px)" +
+            " rotateX(" + (-y * 0.25).toFixed(1) + "deg) rotateY(" + (x * 0.12).toFixed(1) + "deg) scale(1.05)";
+        });
+        el.addEventListener("mouseleave", function () {
+          el.style.transition = "transform .9s cubic-bezier(.22,1.6,.36,1)"; // elastic-ish settle
+          el.style.transform = "";
+        });
+      });
+    }
+  })();
+
   /* ---------- Confetti burst ---------- */
   function burst() {
     if (reducedMotion) return;

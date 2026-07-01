@@ -374,27 +374,71 @@
   </section>
 </main>
 
-<!-- ============ FOOTER ============ -->
-<footer class="site-foot">
-  <div class="wrap">
-    <div class="foot-brand">
-      <img src="assets/trulu-logo-v4.svg" alt="Trulu" />
-      <p>The AI-first HR &amp; payroll platform for teams who'd rather build than do busywork.</p>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 Trulu, Inc. · Made for humans, not paperwork.</span>
-      <div class="foot-links">
-        <a href="mailto:hello@trulu.com">Contact</a>
-        <a href="#" data-share="copy">Share</a>
+<!-- ============ CINEMATIC FOOTER — curtain reveal ============
+     The wrapper sits in normal flow with a clip-path; the footer inside is
+     fixed to the viewport, so scrolling "lifts the page" off the footer. -->
+<div class="cf-wrap" id="cfWrap">
+  <footer class="cf">
+    <div class="cf-aurora" aria-hidden="true"></div>
+    <div class="cf-grid" aria-hidden="true"></div>
+    <div class="cf-giant" id="cfGiant" aria-hidden="true">TRULU</div>
+
+    <!-- diagonal marquee -->
+    <div class="cf-marquee" aria-hidden="true">
+      <div class="cf-marquee-track">
+        <div class="cf-mi">
+          <span>Payroll on autopilot</span><span class="s1">✦</span>
+          <span>AI daily brief</span><span class="s2">✦</span>
+          <span>Time &amp; PTO in one tap</span><span class="s1">✦</span>
+          <span>Onboarding that fills itself in</span><span class="s2">✦</span>
+          <span>HIPAA-grade privacy</span><span class="s1">✦</span>
+        </div>
+        <div class="cf-mi">
+          <span>Payroll on autopilot</span><span class="s1">✦</span>
+          <span>AI daily brief</span><span class="s2">✦</span>
+          <span>Time &amp; PTO in one tap</span><span class="s1">✦</span>
+          <span>Onboarding that fills itself in</span><span class="s2">✦</span>
+          <span>HIPAA-grade privacy</span><span class="s1">✦</span>
+        </div>
       </div>
-      <div class="foot-social">
-        <a href="#" data-stub aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 3h3.3l-7.2 8.2L22.7 21h-6.6l-5.2-6.8L4.9 21H1.6l7.7-8.8L1.3 3H8l4.7 6.2L18.2 3Zm-1.2 16h1.8L7.1 4.9H5.2L17 19Z"/></svg></a>
-        <a href="#" data-stub aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05C20.4 8.65 22 10.6 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3-2 0-2.3 1.57-2.3 3.2V21H9V9Z"/></svg></a>
-        <a href="#" data-stub aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+    </div>
+
+    <!-- center content -->
+    <div class="cf-center">
+      <img class="cf-logo" src="assets/trulu-logo-v4.svg" alt="Trulu" />
+      <h2 class="cf-heading" id="cfHeading">See you on day one<span class="dot">.</span></h2>
+      <div class="cf-links" id="cfLinks">
+        <div class="cf-row">
+          <button class="cf-pill cf-pill-lg magnetic" data-scroll-top>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/></svg>
+            Join the waitlist
+          </button>
+          <a class="cf-pill cf-pill-lg magnetic" href="mailto:hello@trulu.com">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg>
+            Email us
+          </a>
+        </div>
+        <div class="cf-row">
+          <a class="cf-pill magnetic" href="mailto:hello@trulu.com">Contact</a>
+          <a class="cf-pill magnetic" href="#" data-share="copy">Copy link</a>
+          <a class="cf-pill magnetic" href="#" data-share="x">Post on X</a>
+          <a class="cf-pill magnetic" href="#" data-share="linkedin">Share on LinkedIn</a>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+
+    <!-- bottom bar -->
+    <div class="cf-bottom">
+      <div class="cf-copy">© 2026 Trulu, Inc. All rights reserved.</div>
+      <div class="cf-pill cf-badge">
+        <span>Crafted with</span><span class="cf-heart">❤</span><span>by</span><b>Trulu</b>
+      </div>
+      <button class="cf-pill cf-top magnetic" data-scroll-top aria-label="Back to top">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+      </button>
+    </div>
+  </footer>
+</div>
 
 <div class="cs-burst" id="burst" aria-hidden="true"></div>
 
