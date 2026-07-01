@@ -123,6 +123,25 @@
     update();
   })();
 
+  /* ---------- Floating particles (hero) ---------- */
+  (function particles() {
+    const wrap = $("#particles");
+    if (!wrap || reducedMotion) return;
+    const colors = ["#1b9cd8", "#7b6cf6", "#18c29c", "#f5a623", "#ff5da2"];
+    const N = window.innerWidth < 620 ? 10 : 18;
+    let html = "";
+    for (let i = 0; i < N; i++) {
+      const left = Math.random() * 100;
+      const size = 5 + Math.random() * 6;
+      const dur = 14 + Math.random() * 16;
+      const delay = -Math.random() * dur;
+      const drift = (Math.random() * 120 - 60).toFixed(0) + "px";
+      const c = colors[i % colors.length];
+      html += `<i style="left:${left}%;width:${size}px;height:${size}px;background:${c};--drift:${drift};animation-duration:${dur}s;animation-delay:${delay}s"></i>`;
+    }
+    wrap.innerHTML = html;
+  })();
+
   /* ---------- Social-proof count-up ---------- */
   (function countUp() {
     const el = $("#csCount");
@@ -207,8 +226,8 @@
     if (reducedMotion) return;
     const host = $("#burst");
     if (!host) return;
-    const colors = ["#0369a1", "#7db8d8", "#c4dcea", "#16181d", "#d1d5db"];
-    for (let i = 0; i < 60; i++) {
+    const colors = ["#1b9cd8", "#7b6cf6", "#18c29c", "#f5a623", "#ff5da2", "#4fc3ef"];
+    for (let i = 0; i < 70; i++) {
       const p = document.createElement("i");
       const ang = Math.random() * Math.PI * 2;
       const vel = 120 + Math.random() * 320;

@@ -31,7 +31,11 @@
 
 <!-- ============ HERO — coming soon + waitlist (100vh) ============ -->
 <header class="hero" id="hero">
-  <div class="hero-tint" aria-hidden="true"></div>
+  <div class="hero-art" aria-hidden="true">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="cs-particles" id="particles" aria-hidden="true"></div>
 
   <div class="cs-top">
     <a class="cs-logo" href="#top" aria-label="Trulu">
@@ -45,7 +49,7 @@
     <div id="csForm" class="cs-stack">
       <span class="cs-eyebrow cs-reveal d1">The AI-first HR &amp; payroll platform</span>
 
-      <h1 class="cs-h1 cs-reveal d2">Something big is<br />almost here<span class="hd-dot">.</span></h1>
+      <h1 class="cs-h1 cs-reveal d2">Something big is<br /><span class="grad">almost here</span><span class="hd-dot">.</span></h1>
       <p class="cs-sub cs-reveal d3">Trulu runs payroll, tracks time, handles PTO, and onboards new hires — all in one calm, AI-powered place. Be first in line when we open the doors.</p>
 
       <form class="cs-form cs-reveal d4" id="waitForm" novalidate>
@@ -63,7 +67,11 @@
 
       <div class="cs-proof cs-reveal d5">
         <div class="cs-avs">
-          <span>MO</span><span>DC</span><span>SN</span><span>AK</span><span>PR</span>
+          <span style="background:#1b9cd8">MO</span>
+          <span style="background:#7b6cf6">DC</span>
+          <span style="background:#18c29c">SN</span>
+          <span style="background:#ff5da2">AK</span>
+          <span style="background:#f5a623">PR</span>
         </div>
         <p><b id="csCount">1,200+</b> teams already on the list</p>
       </div>
@@ -105,6 +113,7 @@
         <p>A calm, AI-powered home for payroll and people ops. This is the real dashboard early teams are using today.</p>
       </div>
       <div class="lp-shot reveal">
+        <div class="lp-confetti" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <div class="browser">
           <div class="browser-bar">
             <div class="browser-dots"><i></i><i></i><i></i></div>
@@ -154,7 +163,7 @@
       </div>
 
       <!-- Feature 1: Payroll -->
-      <div class="feat reveal">
+      <div class="feat reveal" style="--fc:#1b9cd8">
         <div class="feat-text">
           <div class="feat-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 9h18M16.5 13.5h1.5"/></svg></div>
           <h3>Run payroll in three taps</h3>
@@ -176,7 +185,7 @@
       </div>
 
       <!-- Feature 2: AI -->
-      <div class="feat flip reveal">
+      <div class="feat flip reveal" style="--fc:#7b6cf6">
         <div class="feat-text">
           <div class="feat-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/></svg></div>
           <h3>An AI that actually knows your team</h3>
@@ -199,7 +208,7 @@
       </div>
 
       <!-- Feature 3: People -->
-      <div class="feat reveal">
+      <div class="feat reveal" style="--fc:#18c29c">
         <div class="feat-text">
           <div class="feat-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0M16 6.2a3 3 0 0 1 0 5.6M17.5 19a5.5 5.5 0 0 0-2-4.2"/></svg></div>
           <h3>Your whole team, beautifully organized</h3>
@@ -212,14 +221,14 @@
         </div>
         <div class="snip" aria-hidden="true">
           <div class="snip-head"><span class="snip-dot"></span><span class="snip-title">People · Nursing</span><span class="snip-tag">248 total</span></div>
-          <div class="snip-row"><span class="snip-av">PR</span><div><div class="snip-name">Priya Raman, RN</div><div class="snip-meta">Charge Nurse · Nursing</div></div><span class="snip-pill">Active</span></div>
-          <div class="snip-row"><span class="snip-av">AK</span><div><div class="snip-name">Dr. Abdullah Khan</div><div class="snip-meta">Pediatrician · Pediatrics</div></div><span class="snip-pill">Active</span></div>
-          <div class="snip-row"><span class="snip-av">TB</span><div><div class="snip-name">Tom Becker</div><div class="snip-meta">Lab Technician · Lab</div></div><span class="snip-pill">Active</span></div>
+          <div class="snip-row"><span class="snip-av" style="background:#1b9cd8">PR</span><div><div class="snip-name">Priya Raman, RN</div><div class="snip-meta">Charge Nurse · Nursing</div></div><span class="snip-pill ok">Active</span></div>
+          <div class="snip-row"><span class="snip-av" style="background:#7b6cf6">AK</span><div><div class="snip-name">Dr. Abdullah Khan</div><div class="snip-meta">Pediatrician · Pediatrics</div></div><span class="snip-pill ok">Active</span></div>
+          <div class="snip-row"><span class="snip-av" style="background:#18c29c">TB</span><div><div class="snip-name">Tom Becker</div><div class="snip-meta">Lab Technician · Lab</div></div><span class="snip-pill ok">Active</span></div>
         </div>
       </div>
 
       <!-- Feature 4: Time & PTO -->
-      <div class="feat flip reveal">
+      <div class="feat flip reveal" style="--fc:#f5a623">
         <div class="feat-text">
           <div class="feat-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></div>
           <h3>Time &amp; PTO that approve themselves</h3>
@@ -232,9 +241,9 @@
         </div>
         <div class="snip" aria-hidden="true">
           <div class="snip-head"><span class="snip-dot"></span><span class="snip-title">Time off · pending</span><span class="snip-tag">3 to review</span></div>
-          <div class="snip-row"><span class="snip-av">AH</span><div><div class="snip-name">Ali Hassan</div><div class="snip-meta">Vacation · Jun 16–20 · within policy</div></div><span class="snip-pill">Approve</span></div>
-          <div class="snip-row"><span class="snip-av">AK</span><div><div class="snip-name">Dr. Abdullah Khan</div><div class="snip-meta">Personal · Jun 9–10 · coverage risk</div></div><span class="snip-pill">Review</span></div>
-          <div class="snip-row"><span class="snip-av">PR</span><div><div class="snip-name">Priya Raman</div><div class="snip-meta">Sick · Jun 6 · auto-approvable</div></div><span class="snip-pill">Approve</span></div>
+          <div class="snip-row"><span class="snip-av" style="background:#ff5da2">AH</span><div><div class="snip-name">Ali Hassan</div><div class="snip-meta">Vacation · Jun 16–20 · within policy</div></div><span class="snip-pill ok">Approve</span></div>
+          <div class="snip-row"><span class="snip-av" style="background:#7b6cf6">AK</span><div><div class="snip-name">Dr. Abdullah Khan</div><div class="snip-meta">Personal · Jun 9–10 · coverage risk</div></div><span class="snip-pill warn">Review</span></div>
+          <div class="snip-row"><span class="snip-av" style="background:#1b9cd8">PR</span><div><div class="snip-name">Priya Raman</div><div class="snip-meta">Sick · Jun 6 · auto-approvable</div></div><span class="snip-pill ok">Approve</span></div>
         </div>
       </div>
     </div>
@@ -262,16 +271,19 @@
       </div>
       <div class="lp-tcards">
         <div class="tcard reveal">
+          <div class="stars">★★★★★</div>
           <p class="quote">"Payroll used to eat my entire Thursday. With Trulu it's a coffee-length task. The AI catches overtime mistakes I'd have paid out."</p>
-          <div class="who"><span class="av">MO</span><div><div class="nm">Maya Okonkwo</div><div class="rl">Head of People, Brightwave</div></div></div>
+          <div class="who"><span class="av" style="background:#1b9cd8">MO</span><div><div class="nm">Maya Okonkwo</div><div class="rl">Head of People, Brightwave</div></div></div>
         </div>
         <div class="tcard reveal">
+          <div class="stars">★★★★★</div>
           <p class="quote">"It replaced our spreadsheet, our PTO tracker, and two other tools. Onboarding a new nurse is now a checklist that fills itself in."</p>
-          <div class="who"><span class="av">DC</span><div><div class="nm">Daniel Cho</div><div class="rl">Practice Admin, Apex Care</div></div></div>
+          <div class="who"><span class="av" style="background:#7b6cf6">DC</span><div><div class="nm">Daniel Cho</div><div class="rl">Practice Admin, Apex Care</div></div></div>
         </div>
         <div class="tcard reveal">
+          <div class="stars">★★★★★</div>
           <p class="quote">"The daily AI brief is the first thing I read. It tells me what needs me before anyone has to email me about it. Genuinely calming."</p>
-          <div class="who"><span class="av">SN</span><div><div class="nm">Sara Nilsson</div><div class="rl">Operations, Lumen Labs</div></div></div>
+          <div class="who"><span class="av" style="background:#18c29c">SN</span><div><div class="nm">Sara Nilsson</div><div class="rl">Operations, Lumen Labs</div></div></div>
         </div>
       </div>
     </div>
@@ -285,17 +297,17 @@
           <span class="sec-kicker">Security &amp; compliance</span>
           <h2>Built for healthcare-grade trust</h2>
           <p>Your team's most sensitive data — pay, SSNs, medical credentials — deserves the highest bar. Trulu is engineered for compliance from day one.</p>
-          <ul class="feat-list">
+          <ul class="feat-list" style="--fc:#18c29c">
             <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> End-to-end encryption in transit &amp; at rest (AES-256)</li>
             <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> Role-based access &amp; full audit logs</li>
             <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> Daily backups with point-in-time recovery</li>
           </ul>
         </div>
         <div class="lp-badges">
-          <div class="lp-badge"><span class="lp-badge-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6Z"/><path d="M9 12l2 2 4-4"/></svg></span><div class="lp-badge-t">HIPAA</div><div class="lp-badge-s">Compliant</div></div>
-          <div class="lp-badge"><span class="lp-badge-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5 11 15l4.5-5.5"/></svg></span><div class="lp-badge-t">SOC 2</div><div class="lp-badge-s">Type II</div></div>
-          <div class="lp-badge"><span class="lp-badge-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div class="lp-badge-t">AES-256</div><div class="lp-badge-s">Encryption</div></div>
-          <div class="lp-badge"><span class="lp-badge-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><div class="lp-badge-t">GDPR</div><div class="lp-badge-s">Ready</div></div>
+          <div class="lp-badge"><span class="lp-badge-ic" style="--bc:#1b9cd8"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6Z"/><path d="M9 12l2 2 4-4"/></svg></span><div class="lp-badge-t">HIPAA</div><div class="lp-badge-s">Compliant</div></div>
+          <div class="lp-badge"><span class="lp-badge-ic" style="--bc:#7b6cf6"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5 11 15l4.5-5.5"/></svg></span><div class="lp-badge-t">SOC 2</div><div class="lp-badge-s">Type II</div></div>
+          <div class="lp-badge"><span class="lp-badge-ic" style="--bc:#18c29c"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div class="lp-badge-t">AES-256</div><div class="lp-badge-s">Encryption</div></div>
+          <div class="lp-badge"><span class="lp-badge-ic" style="--bc:#f5a623"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><div class="lp-badge-t">GDPR</div><div class="lp-badge-s">Ready</div></div>
         </div>
       </div>
     </div>
@@ -344,7 +356,7 @@
       <div class="cta-inner reveal">
         <h2>Ready to be first in line?</h2>
         <p>Join the teams ditching busywork for an HR platform that just handles it. Early access, founding-member pricing, zero spam.</p>
-        <button class="btn-accent btn-lg" data-scroll-top>Join the waitlist</button>
+        <button class="btn-white btn-lg" data-scroll-top>Join the waitlist</button>
       </div>
     </div>
   </section>
