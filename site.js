@@ -1,10 +1,12 @@
 /* ============================================================
-   TRULU — Coming Soon + Waitlist
+   TRULU — One-page site: waitlist + scroll interactions
    ============================================================ */
 (function () {
   "use strict";
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  document.documentElement.classList.add("js");
+  const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ------------------------------------------------------------------
      ⬇️  WAITLIST CONFIG — connect signups to your office email
@@ -26,7 +28,7 @@
           the Sheet's ⋮ → "Notification settings" (or Tools ▸ Notification
           rules) → "Notify me: Any time a form is submitted" → save.
           Those emails go to whatever Google account owns the form — so
-          CREATE/OWN THE FORM WITH YOUR OFFICE EMAIL (…@kidsvillepeds.com).
+          CREATE/OWN THE FORM WITH YOUR OFFICE EMAIL.
        4. Paste the two values below. Done — test one signup end to end.
 
      Other services also work here (any URL that accepts an "email" field):
@@ -41,16 +43,90 @@
   };
 
   /* ---------- Freeze-safe reveal safety net ----------
-     Entrance animations look great in a focused tab, but if the page is
-     ever rendered with a paused animation clock, force content visible. */
+     Hero entrance animations look great in a focused tab, but if the page
+     is ever rendered with a paused animation clock, force content visible. */
   window.setTimeout(function () {
     $$(".cs-reveal").forEach(function (el) { el.style.animation = "none"; el.style.opacity = "1"; });
   }, 1400);
 
-  /* ---------- Floating particles ---------- */
+  /* ---------- Sticky nav — slides in after the hero ---------- */
+  const nav = $("#siteNav");
+  const hero = $("#hero");
+  function navCheck() {
+    const threshold = (hero ? hero.offsetHeight : window.innerHeight) * 0.72;
+    nav.classList.toggle("show", window.scrollY > threshold);
+  }
+  navCheck();
+  window.addEventListener("scroll", navCheck, { passive: true });
+  window.addEventListener("resize", navCheck, { passive: true });
+
+  /* ---------- "Join the waitlist" buttons → scroll to hero form ---------- */
+  $$("[data-scroll-top]").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" });
+      window.setTimeout(function () {
+        const inp = $("#csEmail");
+        const formView = $("#csForm");
+        if (inp && formView && formView.style.display !== "none") inp.focus({ preventScroll: true });
+      }, reducedMotion ? 0 : 700);
+    });
+  });
+
+  /* ---------- Scroll reveal for sections (transform only — freeze-safe) ---------- */
+  const reveals = $$(".reveal");
+  if ("IntersectionObserver" in window && !reducedMotion) {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: "0px 0px -6% 0px" });
+    reveals.forEach(function (el) { io.observe(el); });
+    // reveal anything already in view right away
+    const showInView = function () {
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      reveals.forEach(function (el) {
+        const r = el.getBoundingClientRect();
+        if (r.top < vh * 0.96 && r.bottom > -40) el.classList.add("in");
+      });
+    };
+    showInView();
+    requestAnimationFrame(showInView);
+    // safety net: never leave content offset
+    window.addEventListener("load", function () {
+      window.setTimeout(function () { reveals.forEach(function (el) { el.classList.add("in"); }); }, 900);
+    });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("in"); });
+  }
+
+  /* ---------- Product shot: 3D flatten on scroll ---------- */
+  (function shotScroll() {
+    const shot = $(".lp-shot");
+    const card = $(".browser");
+    if (!shot || !card) return;
+    if (reducedMotion) { card.style.transform = "none"; return; }
+    let ticking = false;
+    const clamp = function (v, a, b) { return Math.min(b, Math.max(a, v)); };
+    function update() {
+      ticking = false;
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      const r = shot.getBoundingClientRect();
+      const mobile = window.innerWidth <= 768;
+      const p = clamp((vh - r.top) / (vh * 0.85), 0, 1);
+      const maxRot = mobile ? 10 : 16;
+      const rot = (maxRot * (1 - p)).toFixed(2);
+      const scale = (mobile ? 0.96 + 0.04 * p : 1.03 - 0.03 * p).toFixed(4);
+      card.style.transform = "rotateX(" + rot + "deg) scale(" + scale + ")";
+    }
+    const onScroll = function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    update();
+  })();
+
+  /* ---------- Floating particles (hero) ---------- */
   (function particles() {
     const wrap = $("#particles");
-    if (!wrap) return;
+    if (!wrap || reducedMotion) return;
     const colors = ["#7fe0ff", "#9d8bff", "#5be7c4", "#ffd66b", "#ff9ec7", "#ffffff"];
     const N = window.innerWidth < 620 ? 14 : 26;
     let html = "";
@@ -71,11 +147,12 @@
     const el = $("#csCount");
     if (!el) return;
     const target = CONFIG.startingCount;
-    let cur = 0, t0;
+    if (reducedMotion) { el.textContent = target.toLocaleString("en-US") + "+"; return; }
+    let t0;
     function step(now) {
       if (!t0) t0 = now;
       const p = Math.min(1, (now - t0) / 1400);
-      cur = Math.floor((1 - Math.pow(1 - p, 3)) * target);
+      const cur = Math.floor((1 - Math.pow(1 - p, 3)) * target);
       el.textContent = cur.toLocaleString("en-US") + "+";
       if (p < 1) requestAnimationFrame(step);
     }
@@ -126,7 +203,6 @@
     burst();
   }
 
-  /* ---------- Waitlist submit (local capture + success) ---------- */
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -147,7 +223,7 @@
 
   /* ---------- Confetti burst ---------- */
   function burst() {
-    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (reducedMotion) return;
     const host = $("#burst");
     if (!host) return;
     const colors = ["#7fe0ff", "#9d8bff", "#5be7c4", "#ffd66b", "#ff9ec7", "#4fc3ef", "#ffffff"];
@@ -183,7 +259,7 @@
     if (k === "x") window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(shareText) + "&url=" + encodeURIComponent(shareUrl), "_blank");
     else if (k === "linkedin") window.open("https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(shareUrl), "_blank");
     else if (k === "copy") {
-      const done = () => { const c = $("#csCopy"); if (c) { const o = c.innerHTML; c.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg>'; setTimeout(() => c.innerHTML = o, 1500); } };
+      const done = function () { const c = $("#csCopy"); if (c) { const o = c.innerHTML; c.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg>'; setTimeout(function () { c.innerHTML = o; }, 1500); } };
       if (navigator.clipboard) navigator.clipboard.writeText(shareUrl).then(done).catch(done); else done();
     }
   });
