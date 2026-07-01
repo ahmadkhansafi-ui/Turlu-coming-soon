@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trulu — Coming soon</title>
+<meta name="description" content="Trulu is the AI-first HR & payroll platform. Join the waitlist for early access." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="brand.css" />
+<link rel="stylesheet" href="coming-soon.css" />
+<style>
+  :root {
+    --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+    --primary: #1b9cd8; --primary-strong: #1583b8; --primary-bright: #4fc3ef;
+  }
+  body { margin: 0; background: #0a1622; }
+</style>
+</head>
+<body>
+<div class="cs-root">
+
+  <!-- animated background -->
+  <div class="cs-mesh" aria-hidden="true">
+    <span class="cs-m1"></span><span class="cs-m2"></span><span class="cs-m3"></span><span class="cs-m4"></span><span class="cs-m5"></span>
+  </div>
+  <div class="cs-grid" aria-hidden="true"></div>
+  <div class="cs-vignette" aria-hidden="true"></div>
+  <div class="cs-particles" id="particles" aria-hidden="true"></div>
+
+  <!-- top bar -->
+  <header class="cs-top">
+    <a class="cs-logo" href="#" aria-label="Trulu">
+      <img src="assets/trulu-logo-v4-dark.svg" alt="Trulu" />
+    </a>
+    <span class="cs-pill"><span class="dot"></span> Launching soon</span>
+  </header>
+
+  <!-- main -->
+  <main class="cs-main">
+
+    <!-- form view -->
+    <div id="csForm" style="display:flex;flex-direction:column;align-items:center;width:100%">
+      <span class="cs-eyebrow cs-reveal d1">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/></svg>
+        The AI-first HR &amp; payroll platform
+      </span>
+
+      <h1 class="cs-h1 cs-reveal d2">Something big is <span class="grad">almost here.</span></h1>
+      <p class="cs-sub cs-reveal d3">Trulu runs payroll, tracks time, handles PTO, and onboards new hires — all in one calm, AI-powered place. Be first in line when we open the doors.</p>
+
+      <!-- waitlist -->
+      <form class="cs-form cs-reveal d5" id="waitForm" novalidate>
+        <div class="cs-field">
+          <input id="csEmail" type="email" placeholder="you@company.com" autocomplete="email" aria-label="Email address" required />
+          <button type="submit" id="csSubmit">Join the waitlist
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+        <div class="cs-err" id="csErr"></div>
+        <div class="cs-note">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg> No spam, ever</span>
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg> Early-access perks</span>
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg> Unsubscribe anytime</span>
+        </div>
+      </form>
+
+      <!-- social proof -->
+      <div class="cs-proof cs-reveal d6">
+        <div class="cs-avs">
+          <span style="background:#1b9cd8">MO</span>
+          <span style="background:#7b6cf6">DC</span>
+          <span style="background:#18c29c">SN</span>
+          <span style="background:#ff5da2">AK</span>
+          <span style="background:#ffb020">PR</span>
+        </div>
+        <p><b id="csCount">1,200+</b> teams already on the list</p>
+      </div>
+
+      <a class="cs-explore cs-reveal d6" href="Trulu Landing.html">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-3.2-3.2"/></svg>
+        Take a sneak peek
+        <svg class="arr" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <!-- success view -->
+    <div class="cs-success" id="csSuccess">
+      <div class="ring">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg>
+      </div>
+      <h2>You're on the list! 🎉</h2>
+      <p id="csSuccessMsg">We'll email <b>you</b> the moment Trulu opens. Keep an eye on your inbox for early-access perks.</p>
+      <div class="cs-spot"><span class="n" id="csSpot">#1,248</span><span class="t">your spot in line</span></div>
+      <div class="cs-share">
+        <a href="#" data-share="x" aria-label="Share on X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 3h3.3l-7.2 8.2L22.7 21h-6.6l-5.2-6.8L4.9 21H1.6l7.7-8.8L1.3 3H8l4.7 6.2L18.2 3Zm-1.2 16h1.8L7.1 4.9H5.2L17 19Z"/></svg></a>
+        <a href="#" data-share="linkedin" aria-label="Share on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05C20.4 8.65 22 10.6 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3-2 0-2.3 1.57-2.3 3.2V21H9V9Z"/></svg></a>
+        <a href="#" data-share="copy" aria-label="Copy link" id="csCopy"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></a>
+      </div>
+      <a class="cs-explore" href="Trulu Landing.html" style="margin-top:26px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-3.2-3.2"/></svg>
+        Explore the product
+        <svg class="arr" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="cs-foot">
+    <span>© 2026 Trulu, Inc.</span>
+    <div class="links">
+      <a href="Trulu Landing.html">Preview the product</a>
+      <a href="#" data-share="copy">Share</a>
+      <a href="mailto:hello@trulu.com">Contact</a>
+    </div>
+  </footer>
+
+  <div class="cs-burst" id="burst" aria-hidden="true"></div>
+</div>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#0a1622"/>
+    <g transform="translate(30,32)">
+      <path d="M2 36 C2 18 9 9 16 9 C23 9 25 23 25 31 C25 19 29 12 37 12" fill="none" stroke="#4fc3ef" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="2" cy="36" r="4" fill="#4fc3ef"/><circle cx="39" cy="10" r="4.5" fill="#5be7c4"/>
+    </g>
+  </svg>
+</template>
+
+<script src="coming-soon.js"></script>
+</body>
+</html>
