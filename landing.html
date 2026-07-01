@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trulu — HR & payroll that runs itself</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="brand.css" />
+<link rel="stylesheet" href="landing.css" />
+<style>
+  :root {
+    --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+    /* brand blue */
+    --primary: #1b9cd8; --primary-strong: #1583b8; --primary-bright: #4fc3ef; --primary-deep: #1583b8;
+  }
+</style>
+</head>
+<body>
+
+<!-- animated background -->
+<div class="lp-bg" aria-hidden="true">
+  <div class="lp-orb lp-orb1"></div>
+  <div class="lp-orb lp-orb2"></div>
+  <div class="lp-orb lp-orb3"></div>
+  <div class="lp-orb lp-orb4"></div>
+  <div class="lp-orb lp-orb5"></div>
+  <div class="lp-grid"></div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="lp-nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="lp-logo" aria-label="Trulu home">
+      <img class="l-light" src="assets/trulu-logo-v4.svg" alt="Trulu" style="object-fit: fill" />
+      <img class="l-dark" src="assets/trulu-logo-v4-dark.svg" alt="Trulu" />
+    </a>
+    <nav class="lp-navlinks">
+      <a href="#features">Features</a>
+      <a href="#inside">Inside the dashboard</a>
+      <a href="#security">Security</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="lp-navright">
+      <button class="lp-iconbtn" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">
+        <svg class="ico-moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4 6.5 6.5 0 0 0 20 14.5Z"/></svg>
+      </button>
+      <a class="btn btn-primary btn-lg" href="index.html">Join the waitlist</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="lp-hero wrap">
+    <span class="lp-eyebrow reveal"><span class="tag">🚀 Pre-launch</span> You're seeing Trulu early</span>
+    <h1 class="reveal">Payroll &amp; people, <span class="grad">on autopilot.</span></h1>
+    <p class="lp-sub reveal">Trulu is the AI-first HR platform that runs payroll, tracks time, handles PTO, and onboards new hires — so your team spends minutes on admin, not days.</p>
+    <div class="lp-cta-row reveal">
+      <a class="btn btn-primary" href="index.html">Join the waitlist <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="lp-microcopy reveal">
+      <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg> No credit card</span>
+      <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg> Set up in minutes</span>
+      <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg> Cancel anytime</span>
+    </div>
+
+    <div class="lp-shot reveal">
+      <div class="lp-shot-glow"></div>
+      <div class="lp-confetti" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="browser">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> app.trulu.com</div>
+        </div>
+        <img src="assets/hero-dashboard.png" alt="The Trulu dashboard showing the AI daily brief and payroll run" loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST BAR ============ -->
+  <section class="lp-trust">
+    <div class="wrap"><p>Trusted by modern teams who'd rather not do payroll by hand</p></div>
+    <div class="lp-marquee" aria-label="Customer logos">
+      <div class="lp-marquee-track">
+        <span class="logo">◆ Northwind</span>
+        <span class="logo">✚ Kidsvillepeds</span>
+        <span class="logo">◇ Harmonyville</span>
+        <span class="logo">♥ Hearthville Foundation</span>
+        <span class="logo">▲ Apex Care</span>
+        <span class="logo">● Brightwave</span>
+        <span class="logo">✦ Lumen Labs</span>
+        <span class="logo">❖ Cedar Pediatrics</span>
+        <span class="logo">◐ Riverside Clinic</span>
+        <span class="logo">✺ Sunnyside Care</span>
+        <!-- duplicate set for seamless loop -->
+        <span class="logo" aria-hidden="true">◆ Northwind</span>
+        <span class="logo" aria-hidden="true">✚ Kidsvillepeds</span>
+        <span class="logo" aria-hidden="true">◇ Harmonyville</span>
+        <span class="logo" aria-hidden="true">♥ Hearthville Foundation</span>
+        <span class="logo" aria-hidden="true">▲ Apex Care</span>
+        <span class="logo" aria-hidden="true">● Brightwave</span>
+        <span class="logo" aria-hidden="true">✦ Lumen Labs</span>
+        <span class="logo" aria-hidden="true">❖ Cedar Pediatrics</span>
+        <span class="logo" aria-hidden="true">◐ Riverside Clinic</span>
+        <span class="logo" aria-hidden="true">✺ Sunnyside Care</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INSIDE THE DASHBOARD / FEATURES ============ -->
+  <section id="inside">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-kicker">Inside the dashboard</span>
+        <h2>Everything HR, in one calm place</h2>
+        <p>No more juggling six tools. Here's exactly what you get the moment Trulu opens.</p>
+      </div>
+
+      <!-- Feature 1: Payroll -->
+      <div class="feat reveal" style="--fc:#1b9cd8">
+        <div class="feat-text">
+          <div class="feat-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 9h18M16.5 13.5h1.5"/></svg></div>
+          <h3>Run payroll in three taps</h3>
+          <p>Trulu syncs hours, applies adjustments, and scans every run for anomalies before you approve. Taxes filed, contractors paid, employees happy.</p>
+          <ul class="feat-list">
+            <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> Automatic tax calculation &amp; filing</li>
+            <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> AI flags overtime spikes &amp; mistakes</li>
+            <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> Employees &amp; contractors in one run</li>
+          </ul>
+        </div>
+        <div class="snip" aria-hidden="true">
+          <div class="snip-head"><span class="snip-dot"></span><span class="snip-title">Next payroll run</span><span class="snip-tag">Looking good</span></div>
+          <div class="snip-big">$1,284,500</div>
+          <div class="snip-mut">Runs Fri, Jun 12 · 231 employees + 17 contractors</div>
+          <div style="margin-top:18px;display:flex;justify-content:space-between;font-size:12px;color:var(--text-3);font-weight:600"><span>Run checklist</span><span>4/6</span></div>
+          <div class="snip-bar" style="margin-top:8px"><i style="width:66%"></i></div>
+          <button class="snip-btn">Review &amp; run payroll →</button>
+        </div>
+      </div>
+
+      <!-- Feature 2: AI -->
+      <div class="feat flip reveal" style="--fc:#7b6cf6">
+        <div class="feat-text">
+          <div class="feat-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/></svg></div>
+          <h3>An AI that actually knows your team</h3>
+          <p>Ask anything in plain English. Trulu reads your docs, parses invoices, drafts reviews, and surfaces what needs you — before you go looking for it.</p>
+          <ul class="feat-list">
+            <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> Natural-language answers across your data</li>
+            <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> Auto-parses contracts, invoices &amp; W-4s</li>
+            <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> A daily brief of what matters today</li>
+          </ul>
+        </div>
+        <div class="snip" aria-hidden="true">
+          <div class="snip-head"><span class="snip-dot" style="background:var(--primary)"></span><span class="snip-title">Trulu AI</span><span class="snip-tag">Online</span></div>
+          <div class="snip-chat">
+            <div class="snip-bubble me">Who's about to max out their PTO?</div>
+            <div class="snip-bubble ai">4 people are over balance heading into Q3 — Ali, Amen, Lina &amp; Marcus. Want me to nudge their managers?</div>
+            <div class="snip-bubble me">Summarize this cycle's payroll changes</div>
+            <div class="snip-bubble ai">Gross is up 2.1% — 6 new hires (+$41k) and 38 nursing OT hours. All within forecast ✨</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3: People -->
+      <div class="feat reveal" style="--fc:#18c29c">
+        <div class="feat-text">
+          <div class="feat-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0M16 6.2a3 3 0 0 1 0 5.6M17.5 19a5.5 5.5 0 0 0-2-4.2"/></svg></div>
+          <h3>Your whole team, beautifully organized</h3>
+          <p>Every person, role, document, and pay detail in one searchable directory. Filter by department, open a profile, get an instant AI summary.</p>
+          <ul class="feat-list">
+            <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> Rich profiles with comp &amp; documents</li>
+            <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> Filter by team, role, or status</li>
+            <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> Custom onboarding templates per role</li>
+          </ul>
+        </div>
+        <div class="snip" aria-hidden="true">
+          <div class="snip-head"><span class="snip-dot"></span><span class="snip-title">People · Nursing</span><span class="snip-tag">248 total</span></div>
+          <div class="snip-row"><span class="snip-av" style="background:#1b9cd8">PR</span><div><div class="snip-name">Priya Raman, RN</div><div class="snip-meta">Charge Nurse · Nursing</div></div><span class="snip-pill" style="background:var(--ok-bg);color:var(--ok)">Active</span></div>
+          <div class="snip-row"><span class="snip-av" style="background:#7b6cf6">AK</span><div><div class="snip-name">Dr. Abdullah Khan</div><div class="snip-meta">Pediatrician · Pediatrics</div></div><span class="snip-pill" style="background:var(--ok-bg);color:var(--ok)">Active</span></div>
+          <div class="snip-row"><span class="snip-av" style="background:#18c29c">TB</span><div><div class="snip-name">Tom Becker</div><div class="snip-meta">Lab Technician · Lab</div></div><span class="snip-pill" style="background:var(--ok-bg);color:var(--ok)">Active</span></div>
+        </div>
+      </div>
+
+      <!-- Feature 4: Time & PTO -->
+      <div class="feat flip reveal" style="--fc:#ffb020">
+        <div class="feat-text">
+          <div class="feat-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></div>
+          <h3>Time &amp; PTO that approve themselves</h3>
+          <p>Track attendance, see who's out, and approve time off in a tap. Trulu pre-checks each request against policy and coverage so you decide in seconds.</p>
+          <ul class="feat-list">
+            <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> One-tap approve / deny with AI context</li>
+            <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> Live "who's out this week" view</li>
+            <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> Overtime alerts before they cost you</li>
+          </ul>
+        </div>
+        <div class="snip" aria-hidden="true">
+          <div class="snip-head"><span class="snip-dot"></span><span class="snip-title">Time off · pending</span><span class="snip-tag">3 to review</span></div>
+          <div class="snip-row"><span class="snip-av" style="background:#1b9cd8">AH</span><div><div class="snip-name">Ali Hassan</div><div class="snip-meta">Vacation · Jun 16–20 · within policy</div></div><span class="snip-pill" style="background:var(--ok-bg);color:var(--ok)">✓ Approve</span></div>
+          <div class="snip-row"><span class="snip-av" style="background:#ff6b5c">AK</span><div><div class="snip-name">Dr. Abdullah Khan</div><div class="snip-meta">Personal · Jun 9–10 · coverage risk</div></div><span class="snip-pill" style="background:var(--warn-bg);color:var(--warn)">Review</span></div>
+          <div class="snip-row"><span class="snip-av" style="background:#18c29c">PR</span><div><div class="snip-name">Priya Raman</div><div class="snip-meta">Sick · Jun 6 · auto-approvable</div></div><span class="snip-pill" style="background:var(--ok-bg);color:var(--ok)">✓ Approve</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="lp-stats" id="features">
+    <div class="wrap">
+      <div class="grid">
+        <div class="lp-stat reveal"><div class="n">3 taps</div><div class="l">to run a full payroll cycle</div></div>
+        <div class="lp-stat reveal"><div class="n">6 → 1</div><div class="l">HR tools replaced by Trulu</div></div>
+        <div class="lp-stat reveal"><div class="n">~8 hrs</div><div class="l">saved per pay period</div></div>
+        <div class="lp-stat reveal"><div class="n">100%</div><div class="l">of runs scanned by AI</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section id="reviews">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-kicker">Loved by HR teams</span>
+        <h2>Less admin. More humans.</h2>
+        <p>Early teams are already running on Trulu. Here's what they say.</p>
+      </div>
+      <div class="lp-tcards">
+        <div class="tcard reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Payroll used to eat my entire Thursday. With Trulu it's a coffee-length task. The AI catches overtime mistakes I'd have paid out."</p>
+          <div class="who"><span class="av" style="background:#1b9cd8">MO</span><div><div class="nm">Maya Okonkwo</div><div class="rl">Head of People, Brightwave</div></div></div>
+        </div>
+        <div class="tcard reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"It replaced our spreadsheet, our PTO tracker, and two other tools. Onboarding a new nurse is now a checklist that fills itself in."</p>
+          <div class="who"><span class="av" style="background:#7b6cf6">DC</span><div><div class="nm">Daniel Cho</div><div class="rl">Practice Admin, Apex Care</div></div></div>
+        </div>
+        <div class="tcard reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"The daily AI brief is the first thing I read. It tells me what needs me before anyone has to email me about it. Genuinely calming."</p>
+          <div class="who"><span class="av" style="background:#18c29c">SN</span><div><div class="nm">Sara Nilsson</div><div class="rl">Operations, Lumen Labs</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECURITY / HIPAA ============ -->
+  <section id="security">
+    <div class="wrap">
+      <div class="lp-sec-band reveal">
+        <div class="lp-sec-copy">
+          <span class="sec-kicker">Security &amp; compliance</span>
+          <h2>Built for healthcare-grade trust</h2>
+          <p>Your team's most sensitive data — pay, SSNs, medical credentials — deserves the highest bar. Trulu is engineered for compliance from day one.</p>
+          <ul class="feat-list">
+            <li><span class="ck" style="--fc:#18c29c"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> End-to-end encryption in transit &amp; at rest (AES-256)</li>
+            <li><span class="ck" style="--fc:#18c29c"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> Role-based access &amp; full audit logs</li>
+            <li><span class="ck" style="--fc:#18c29c"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"/></svg></span> Daily backups with point-in-time recovery</li>
+          </ul>
+        </div>
+        <div class="lp-badges">
+          <div class="lp-badge"><span class="lp-badge-ic" style="--bc:#1b9cd8"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6Z"/><path d="M9 12l2 2 4-4"/></svg></span><div class="lp-badge-t">HIPAA</div><div class="lp-badge-s">Compliant</div></div>
+          <div class="lp-badge"><span class="lp-badge-ic" style="--bc:#7b6cf6"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5 11 15l4.5-5.5"/></svg></span><div class="lp-badge-t">SOC 2</div><div class="lp-badge-s">Type II</div></div>
+          <div class="lp-badge"><span class="lp-badge-ic" style="--bc:#18c29c"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div class="lp-badge-t">AES-256</div><div class="lp-badge-s">Encryption</div></div>
+          <div class="lp-badge"><span class="lp-badge-ic" style="--bc:#ffb020"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><div class="lp-badge-t">GDPR</div><div class="lp-badge-s">Ready</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq">
+    <div class="wrap lp-faq-wrap">
+      <div class="sec-head reveal">
+        <span class="sec-kicker">FAQ</span>
+        <h2>Questions, answered</h2>
+        <p>Everything you might want to know before you join.</p>
+      </div>
+      <div class="lp-faq reveal">
+        <details class="lp-faq-item" open>
+          <summary>Is my team's data secure?<span class="lp-faq-ic"></span></summary>
+          <div class="lp-faq-a">Yes. Trulu encrypts all data in transit and at rest (AES-256), uses role-based access with full audit logs, and is built to HIPAA and SOC 2 standards — important for healthcare teams handling sensitive records.</div>
+        </details>
+        <details class="lp-faq-item">
+          <summary>Can I migrate from my current HR or payroll tool?<span class="lp-faq-ic"></span></summary>
+          <div class="lp-faq-a">Absolutely. Import your team via spreadsheet or a direct connection, and Trulu's AI will parse existing documents (offer letters, W-4s, licenses) to fill in profiles automatically. Most teams are set up in under a day.</div>
+        </details>
+        <details class="lp-faq-item">
+          <summary>When does Trulu launch?<span class="lp-faq-ic"></span></summary>
+          <div class="lp-faq-a">We're in pre-launch now. Join the waitlist to get early access, lock in founding-member pricing, and help shape the roadmap. We'll email you the moment your workspace is ready.</div>
+        </details>
+        <details class="lp-faq-item">
+          <summary>How does the AI actually help?<span class="lp-faq-ic"></span></summary>
+          <div class="lp-faq-a">Trulu AI reads across your whole workspace: it gives you a daily brief of what needs attention, scans every payroll run for anomalies, parses uploaded documents, drafts performance reviews, and answers plain-English questions about your team and pay.</div>
+        </details>
+        <details class="lp-faq-item">
+          <summary>What does it cost?<span class="lp-faq-ic"></span></summary>
+          <div class="lp-faq-a">Plans and founding-member pricing will be shared with waitlist members first. Pre-launch teams start free — join the waitlist to lock in early-access perks.</div>
+        </details>
+        <details class="lp-faq-item">
+          <summary>Do you handle taxes and filings?<span class="lp-faq-ic"></span></summary>
+          <div class="lp-faq-a">Yes — Trulu calculates, withholds, and files federal, state, and local payroll taxes automatically, for both employees and contractors, so nothing slips through the cracks.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="lp-ctaband" id="about">
+    <div class="wrap">
+      <div class="cta-inner reveal">
+        <div class="cta-glow"></div>
+        <h2>Ready to make payday painless?</h2>
+        <p>Join the teams ditching busywork for an HR platform that just handles it. Get started in minutes.</p>
+        <div class="lp-cta-row">
+          <a class="btn btn-white" href="index.html">Join the waitlist</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="lp-footer">
+  <div class="wrap">
+    <div class="lp-foot-top">
+      <div class="lp-foot-brand">
+        <span class="logo"><img class="l-light" src="assets/trulu-logo-v4.svg" alt="Trulu" /><img class="l-dark" src="assets/trulu-logo-v4-dark.svg" alt="Trulu" style="display:none" /></span>
+        <p>The AI-first HR &amp; payroll platform for teams who'd rather build than do busywork.</p>
+      </div>
+      <div class="lp-foot-col">
+        <h4>Product</h4>
+        <a href="#inside">Payroll</a><a href="#inside">People</a><a href="#inside">Time &amp; PTO</a><a href="#inside">Onboarding</a>
+      </div>
+      <div class="lp-foot-col">
+        <h4>Company</h4>
+        <a href="#about">About</a><a href="#" data-stub>Contact</a><a href="#" data-stub>Careers</a><a href="#" data-stub>Blog</a>
+      </div>
+      <div class="lp-foot-col">
+        <h4>Legal</h4>
+        <a href="#" data-stub>Privacy Policy</a><a href="#" data-stub>Terms</a><a href="#" data-stub>Security</a>
+      </div>
+    </div>
+    <div class="lp-foot-bottom">
+      <span>© 2026 Trulu, Inc. · Made for humans, not paperwork.</span>
+      <div class="lp-foot-social">
+        <a href="#" data-stub aria-label="X"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 3h3.3l-7.2 8.2L22.7 21h-6.6l-5.2-6.8L4.9 21H1.6l7.7-8.8L1.3 3H8l4.7 6.2L18.2 3Zm-1.2 16h1.8L7.1 4.9H5.2L17 19Z"/></svg></a>
+        <a href="#" data-stub aria-label="LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05C20.4 8.65 22 10.6 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3-2 0-2.3 1.57-2.3 3.2V21H9V9Z"/></svg></a>
+        <a href="#" data-stub aria-label="GitHub"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="landing.js"></script>
+</body>
+</html>
